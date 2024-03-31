@@ -8,38 +8,326 @@
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">My Account</a></li>
-                <li><a href="#">Wishlist</a></li>
-                <li><a href="#">Order Tracking</a></li>
-            </ul>
-        </nav>
-        <span>100% Secure delivery without contacting the courier</span>
-        <div>
-            <div class="dropdown">
-                <button class="dropbtn">English</button>
-                <div class="dropdown-content">
-                    <a href="#">Français</a>
-                    <a href="#">Deutsch</a>
-                    <a href="#">Русский</a>
+        <div id="headerContainerTop">            
+            <nav>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">My Account</a></li>
+                    <li><a href="#">Wishlist</a></li>
+                    <li><a href="#">Order Tracking</a></li>
+                </ul>
+            </nav>
+            <div id="marqueeContainer">
+                <div id="marquee">
+                    <span>100% Secure delivery without contacting the courier</span>
+                    <span>Supper Value Deals - Save more with coupons</span>
+                    <span>Trendy 25silver jewelry, save up 35% off today</span>
+                </div>
+            </div>     
+            <div id="headerDropdown">
+                <div class="dropdown">
+                    <a href="#" class="dropbtn">English</a>
+                    <div class="dropdown-content">
+                        <a href="#">Français</a>
+                        <a href="#">Deutsch</a>
+                        <a href="#">Русский</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="#" class="dropbtn">USD</a>
+                    <div class="dropdown-content">
+                        <a href="#">EUR</a>
+                        <a href="#">RUB</a>
+                    </div>
                 </div>
             </div>
-            <div class="dropdown">
-                <button class="dropbtn">USD</button>
-                <div class="dropdown-content">
-                    <a href="#">EUR</a>
-                    <a href="#">RUB</a>
+        </div>
+        <div id="headerContainerCenter">
+            <img src="./src/images/header/center/logo.svg" alt="Logo">
+            <form action="">
+                <select name="" id="allCategories">
+                    <option value="">All Categories</option>
+                </select>
+                <input type="text" placeholder="Search for items">
+            </form>
+            <nav>
+                <ul>
+                    <li><a href="#"><img src="./src/images/header/center/icon-compare.svg" alt="">Compare</a></li>
+                    <li><a href="#"><img src="./src/images/header/center/icon-heart.svg" alt="">Wishlist</a></li>
+                    <li><a href="#"><img src="./src/images/header/center/icon-cart.svg" alt="">Cart</a></li>
+                    <li><a href="#"><img src="./src/images/header/center/icon-user.svg" alt="">Account</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="headerContainerBottom">
+            <a href="#">Browse All Categories</a>
+            <nav>
+                <ul>
+                    <li><a id="headerLinkWithIcon" href="#"><img src="./src/images/header/bottom/icon-hot.svg" alt="">Deals</a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">Vendors</a></li>
+                    <li><a href="#">Mega Menu</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Pages</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div id="headerContactInfo">
+                <img src="./src/images/header/bottom/icon-headphone.svg" alt="">
+                <div>
+                    <p>1900 - 888</p>
+                    <span>24/7 Support Center</span>
                 </div>
             </div>
         </div>
     </header>
     <main>
-
+        <section id="upBanner">
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+            <div id="upBannerSlider1">
+                <div class="upBannerHeader">
+                    <h1>Don’t miss amazing grocery deals</h1>
+                    <p>Sign up for the daily newsletter</p>
+                </div>
+            </div>
+            <div id="upBannerSlider2">
+                <div class="upBannerHeader">
+                    <h1>Fresh Vegetables Big discount</h1>
+                    <p>Save up to 50% off on your first order</p>
+                </div>
+            </div>
+            <div id="upBannerForm">
+                <form action="">
+                    <input type="text" placeholder="Your Email Address">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </section>
+        <section id="featuredCategories">
+            <div id="featuredCategoriesHeader">
+                <div id="featuredCategoriesText">
+                    <h1>Featured Categories</h1>
+                    <a href="#">All</a>
+                    <a href="#">Fast Food</a>
+                    <a href="#">Pet Food</a>
+                    <a href="#">Vegetables</a>
+                </div>
+                <div id="featuredCategoriesArrows">
+                    <button class="prev">&#10094;</button>
+                    <button class="next">&#10095;</button>
+                </div>
+            </div>
+            <div id="featuredCategoriesCards">
+                <div class="featuredCategoriesCard">
+                    <img src="./src/images/main/featured-categories/hamburger.png" alt="Hamburger">
+                    <a href="#">Hamburger</a>
+                    <span>26 Items</span>
+                </div>
+                <div class="featuredCategoriesCard">
+                    <img src="./src/images/main/featured-categories/organic-kiwi.png" alt="Organic Kiwi">
+                    <a href="#">Organic Kiwi</a>
+                    <span>28 Items</span>
+                </div>
+                <div class="featuredCategoriesCard">
+                    <img src="./src/images/main/featured-categories/persimmon.png" alt="Persimmon">
+                    <a href="#">Persimmon</a>
+                    <span>14 Items</span>
+                </div>
+                <div class="featuredCategoriesCard">
+                    <img src="./src/images/main/featured-categories/red-apple.png" alt="Red Apple">
+                    <a href="#">Red Apple</a>
+                    <span>54 Items</span>
+                </div>
+                <div class="featuredCategoriesCard">
+                    <img src="./src/images/main/featured-categories/dog-food.png" alt="Dog Food">
+                    <a href="#">Dog Food</a>
+                    <span>56 Items</span>
+                </div>
+                <div class="featuredCategoriesCard">
+                    <img src="./src/images/main/featured-categories/green-cabbage.png" alt="Green Cabbage">
+                    <a href="#">Green Cabbage</a>
+                    <span>72 Items</span>
+                </div>
+                <div class="featuredCategoriesCard">
+                    <img src="./src/images/main/featured-categories/strawberry.png" alt="Strawberry">
+                    <a href="#">Strawberry</a>
+                    <span>36 Items</span>
+                </div>
+                <div class="featuredCategoriesCard">
+                    <img src="./src/images/main/featured-categories/black-plum.png" alt="Black Plum">
+                    <a href="#">Black Plum</a>
+                    <span>123 Items</span>
+                </div>
+                <div class="featuredCategoriesCard">
+                    <img src="./src/images/main/featured-categories/custard-apple.png" alt="Custard Apple">
+                    <a href="#">Custard Apple</a>
+                    <span>34 Items</span>
+                </div>
+                <div class="featuredCategoriesCard">
+                    <img src="./src/images/main/featured-categories/chocolate-bar.png" alt="Chocolate Bar">
+                    <a href="#">Chocolate Bar</a>
+                    <span>89 Items</span>
+                </div>
+                <div class="featuredCategoriesCard">
+                    <img src="./src/images/main/featured-categories/orange.png" alt="Orange">
+                    <a href="#">Orange</a>
+                    <span>87 Items</span>
+                </div>
+                <div class="featuredCategoriesCard">
+                    <img src="./src/images/main/featured-categories/grape.png" alt="Grape">
+                    <a href="#">Grape</a>
+                    <span>50 Items</span>
+                </div>
+                <div class="featuredCategoriesCard">
+                    <img src="./src/images/main/featured-categories/dragon-fruit.png" alt="Dragon Fruit">
+                    <a href="#">Dragon Fruit</a>
+                    <span>33 Items</span>
+                </div>
+            </div>
+        </section>
+        <section id="popularProducts">
+            <div id="popularProductsHeader">
+                <h1>Popular Products</h1>
+                <div id="popularProductsButtons">
+                    <button>All</button>
+                    <button>Milk & Dairy</button>
+                    <button>Coffee & Tea</button>
+                    <button>Pet Food</button>
+                    <button>Meat</button>
+                    <button>Vegetables</button>
+                    <button>Fruits</button>
+                </div>
+            </div>
+            <div id="popularProductsCards">
+                <div class="popularProductsCard">
+                    <img src="./src/images/main/popular-products/product-1-1.jpg" alt="">
+                    <span>Snack</span>
+                    <h3>Seeds of Change Organic Quinoa, Brown, & Red Rice</h3>
+                    <img src="" alt="">
+                    <span>By NestFood</span>
+                    <div class="popularProductsPrices">
+                        <span>$28.85</span>
+                        <span class="priceDiscounted">$32.8</span>
+                    </div>
+                    <a href="#"><img src="" alt="">Add</a>
+                </div>
+                <div class="popularProductsCard">
+                    <img src="./src/images/main/popular-products/product-2-1.jpg" alt="">
+                    <span>Hodo Foods</span>
+                    <h3>All Natural Italian-Style Chicken Meatballs</h3>
+                    <img src="" alt="">
+                    <span>By Stouffer</span>
+                    <div class="popularProductsPrices">
+                        <span>$52.85</span>
+                        <span class="priceDiscounted">$55.8</span>
+                    </div>
+                    <a href="#"><img src="" alt="">Add</a>
+                </div>
+                <div class="popularProductsCard">
+                    <img src="./src/images/main/popular-products/product-3-1.jpg" alt="">
+                    <span>Snack</span>
+                    <h3>Angie’s Boomchickapop Sweet & Salty Kettle Corn</h3>
+                    <img src="" alt="">
+                    <span>By StarKist</span>
+                    <div class="popularProductsPrices">
+                        <span>$48.85</span>
+                        <span class="priceDiscounted">$52.8</span>
+                    </div>
+                    <a href="#"><img src="" alt="">Add</a>
+                </div>
+                <div class="popularProductsCard">
+                    <img src="./src/images/main/popular-products/product-4-1.jpg" alt="">
+                    <span>Vegetables</span>
+                    <h3>Foster Farms Takeout Crispy Classic Buffalo Wings</h3>
+                    <img src="" alt="">
+                    <span>By NestFood</span>
+                    <div class="popularProductsPrices">
+                        <span>$17.85</span>
+                        <span class="priceDiscounted">$19.8</span>
+                    </div>
+                    <a href="#"><img src="" alt="">Add</a>
+                </div>
+                <div class="popularProductsCard">
+                    <img src="./src/images/main/popular-products/product-5-1.jpg" alt="">
+                    <span>Pet Foods</span>
+                    <h3>Blue Diamond Almonds Lightly Salted Vegetables</h3>
+                    <img src="" alt="">
+                    <span>By NestFood</span>
+                    <div class="popularProductsPrices">
+                        <span>$23.85</span>
+                        <span class="priceDiscounted">$25.8</span>
+                    </div>
+                    <a href="#"><img src="" alt="">Add</a>
+                </div>
+                <div class="popularProductsCard">
+                    <img src="./src/images/main/popular-products/product-6-1.jpg" alt="">
+                    <span>Hodo Foods</span>
+                    <h3>Chobani Complete Vanilla Greek Yogurt</h3>
+                    <img src="" alt="">
+                    <span>By NestFood</span>
+                    <div class="popularProductsPrices">
+                        <span>$54.85</span>
+                        <span class="priceDiscounted">$55.8</span>
+                    </div>
+                    <a href="#"><img src="" alt="">Add</a>
+                </div>
+                <div class="popularProductsCard">
+                    <img src="./src/images/main/popular-products/product-7-1.jpg" alt="">
+                    <span>Meat</span>
+                    <h3>Canada Dry Ginger Ale – 2 L Bottle - 200ml - 400g</h3>
+                    <img src="" alt="">
+                    <span>By NestFood</span>
+                    <div class="popularProductsPrices">
+                        <span>$32.85</span>
+                        <span class="priceDiscounted">$33.8</span>
+                    </div>
+                    <a href="#"><img src="" alt="">Add</a>
+                </div>
+                <div class="popularProductsCard">
+                    <img src="./src/images/main/popular-products/product-8-1.jpg" alt="">
+                    <span>Snack</span>
+                    <h3>Encore Seafoods Stuffed Alaskan Salmon</h3>
+                    <img src="" alt="">
+                    <span>By NestFood</span>
+                    <div class="popularProductsPrices">
+                        <span>$35.85</span>
+                        <span class="priceDiscounted">$37.8</span>
+                    </div>
+                    <a href="#"><img src="" alt="">Add</a>
+                </div>
+                <div class="popularProductsCard">
+                    <img src="./src/images/main/popular-products/product-9-1.jpg" alt="">
+                    <span>Coffes</span>
+                    <h3>Gorton’s Beer Battered Fish Fillets with soft paper</h3>
+                    <img src="" alt="">
+                    <span>By Old El Paso</span>
+                    <div class="popularProductsPrices">
+                        <span>$23.85</span>
+                        <span class="priceDiscounted">$25.8</span>
+                    </div>
+                    <a href="#"><img src="" alt="">Add</a>
+                </div>
+                <div class="popularProductsCard">
+                    <img src="./src/images/main/popular-products/product-10-1.jp" alt="">
+                    <span>Cream</span>
+                    <h3>Haagen-Dazs Caramel Cone Ice Cream Ketchup</h3>
+                    <img src="" alt="">
+                    <span>By Tyson</span>
+                    <div class="popularProductsPrices">
+                        <span>$22.85</span>
+                        <span class="priceDiscounted">$24.8</span>
+                    </div>
+                    <a href="#"><img src="g" alt="">Add</a>
+                </div>
+            </div>
+        </section>
     </main>
     <footer>
 
     </footer>
+    <script src="./src/js/script.js"></script>
 </body>
 </html>

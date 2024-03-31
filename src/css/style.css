@@ -1,12 +1,20 @@
-header {
-    
+/* First things first */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+}
+
+.dropdown {}
 
 /* Style the dropdown button */
 .dropbtn {
-    background-color: #3498db;
-    color: white;
+    color: black;
     padding: 10px;
     font-size: 16px;
     border: none;
@@ -43,4 +51,234 @@ header {
 /* Style the dropdown button when hovering */
 .dropdown:hover .dropbtn {
     background-color: #2980b9;
+}
+
+#marqueeContainer {
+    height: 20px;
+    overflow: hidden;
+    position: relative;
+    box-sizing: border-box;
+
+    #marquee {
+        display: flex;
+        flex-direction: column;
+        animation: marquee 15s linear infinite;
+
+        span {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-200%);
+    }
+    100% {
+        transform: translateY(-300%);
+    }
+}
+
+/* Header */
+
+header {
+    display: flex;
+    flex-direction: column;
+    margin: 2vh;
+    gap: 5vh;
+
+    #headerContainerTop {
+        display: flex;
+        justify-content: space-between;
+
+        nav {
+            ul {
+                display: flex;
+                gap: 15px;
+                list-style-type: none;
+
+                li {
+                    a {
+                        color: #7E7E7E;
+
+                        &:hover {
+                            color: #000;
+                        }
+                    }
+                }
+            }
+        }
+
+        #headerDropdown {
+            display: flex;
+            gap: 5px;
+        }
+
+
+    }
+
+    #headerContainerCenter {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        nav {
+            ul {
+                display: flex;
+                gap: 15px;
+                list-style-type: none;
+
+                li {
+                    a {
+                        color: #7E7E7E;
+
+                        &:hover {
+                            color: #000;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #headerContainerBottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10vh;
+
+        nav {
+
+            ul {
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                gap: 10vh;
+                list-style-type: none;
+
+                li {
+
+                    a {
+                        color: #7E7E7E;
+
+                        &:hover {
+                            color: #000;
+                        }
+                    }
+
+                    #headerLinkWithIcon {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 5px;
+                    }
+                }
+            }
+        }
+
+        #headerContactInfo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+    }
+
+}
+
+main {
+    margin-top: 5vh;
+
+    section {
+        margin-bottom: 5vh;
+        margin-left: 2vh;
+    }
+
+    #upBanner {
+        background-image: url('/src/images/main/upbanner/slider-1.png');
+        background-size: cover;
+        width: 100%;
+        height: 70vh;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        padding-left: 5vh;
+
+    }
+
+    #featuredCategories {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        gap: 2vh;
+
+        #featuredCategoriesHeader {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 5vh;
+
+            #featuredCategoriesText {
+                display: flex;
+                align-items: center;
+                gap: 3vh;
+            }
+        }
+
+        #featuredCategoriesArrows {
+        }
+
+        #featuredCategoriesCards {
+            display: flex;
+            gap: 5vh;
+            width: 50vh;
+
+            .featuredCategoriesCard {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 3vh;
+                background-color: #BCE3C9;
+            }
+        }
+        
+    }
+
+    #popularProducts {
+
+        #popularProductsHeader {
+            display: flex;
+            justify-content: space-between;
+
+            #popularProductsButtons {
+                display: flex;
+                gap: 5vh;
+
+                button {
+                    background: none;
+                    border: none;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: #3BB77E;
+                    }
+                }
+            }
+        }
+    }
+
+    #popularProductsCards {
+
+        .popularProductsCard {
+            img {
+                width: 20%;
+                height: 70vh;
+                object-fit: cover;
+            }
+        }
+    }
 }
