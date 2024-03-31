@@ -10,19 +10,18 @@ for(var i = 0; i < selections.length; i++){
 }
 
 //
-let marqueeIndex = 0;
-const texts = document.querySelectorAll('#marquee span');
+let headerTopSpansIndex = 0;
+const texts = document.querySelectorAll('#headerTopSpans span');
 
-function updateMarquee() {
-    texts[marqueeIndex].style.display = 'none';
-    marqueeIndex = (marqueeIndex + 1) % texts.length;
-    texts[marqueeIndex].style.display = 'block';
+function updateTopSpans() {
+    texts[headerTopSpansIndex].style.display = 'none';
+    headerTopSpansIndex = (headerTopSpansIndex + 1) % texts.length;
+    texts[headerTopSpansIndex].style.display = 'block';
 }
 
-setInterval(updateMarquee, 5000); // Change slide every 5 seconds
+setInterval(updateTopSpans, 2000); // Change slide every 5 seconds
 
-
-// Making slide for #upBanner content
+// Slider for #upBanner section
 
 const prevBtn = document.querySelector('.prev'); // Select previous button if included
 const nextBtn = document.querySelector('.next'); // Select next button if included
@@ -76,3 +75,28 @@ if (prevBtn) {
 if (nextBtn) {
   nextBtn.addEventListener('click', () => changeSlide('next'));
 }
+
+
+// Slider for #featuredCategories section
+
+let slideIndex = 0;
+const slides = document.querySelectorAll('#featuredCategoriesCards .featuredCategoriesCard');
+const prevButton = document.querySelector('#featuredCategoriesArrows .prev');
+const nextButton = document.querySelector('#featuredCategoriesArrows .next');
+
+function showSlide(n) {
+    // Normalize slide index
+    slideIndex = (n + slides.length) % slides.length;
+
+    // Show current slide
+    slides.forEach((slide, index) => {
+        slide.style.transform = `translateX(${-slideIndex * 100}%)`;
+    });
+}
+
+// Show the first slide initially
+showSlide(slideIndex);
+
+// Attach event listeners to the buttons
+prevButton.addEventListener('click', () => showSlide(slideIndex - 1));
+nextButton.addEventListener('click', () => showSlide(slideIndex + 1));
