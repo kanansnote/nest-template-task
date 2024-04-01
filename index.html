@@ -6,6 +6,9 @@
     <title>Nest</title>
     <link rel="stylesheet" href="./src/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
 </head>
 <body>
     <header>
@@ -25,18 +28,18 @@
             </div>
             <div id="headerDropdown">
                 <div class="dropdown">
-                    <a href="#" class="dropbtn">English</a>
-                    <div class="dropdown-content">
-                        <a href="#">Français</a>
-                        <a href="#">Deutsch</a>
-                        <a href="#">Русский</a>
+                    <div class="dropbtn">English<i class="fas fa-angle-down"></i></div>
+                    <div class="dropdown-content dropdownLanguages">
+                      <a href="#"><img src="./src/images/header/top/flag-fr.png" alt="French Flag">Français</a>
+                      <a href="#"><img src="./src/images/header/top/flag-dt.png" alt="German Flag">Deutsch</a>
+                      <a href="#"><img src="./src/images/header/top/flag-ru.png" alt="Russian Flag">Русский</a>
                     </div>
                 </div>
                 <div class="dropdown">
-                    <a href="#" class="dropbtn">USD</a>
-                    <div class="dropdown-content">
-                        <a href="#">EUR</a>
-                        <a href="#">RUB</a>
+                    <div class="dropbtn">USD<i class="fas fa-angle-down"></i></div>
+                    <div class="dropdown-content dropdownCurrencies">
+                        <a href="#"><img src="./src/images/header/top/europe-flag.png" alt="Europe Flag">EUR</a>
+                        <a href="#"><img src="./src/images/header/top/flag-ru.png" alt="Russian Flag">RUB</a>
                     </div>
                 </div>
             </div>
@@ -106,83 +109,86 @@
         </section>
         <section id="featuredCategories">
             <div id="featuredCategoriesHeader">
-                <div id="featuredCategoriesText">
-                    <h1>Featured Categories</h1>
-                    <a href="#">All</a>
-                    <a href="#">Fast Food</a>
-                    <a href="#">Pet Food</a>
-                    <a href="#">Vegetables</a>
-                </div>
-                <div id="featuredCategoriesArrows">
-                    <button class="prev">&#10094;</button>
-                    <button class="next">&#10095;</button>
-                </div>
+                <h1>Featured Categories</h1>
+                <a href="#">All</a>
+                <a href="#">Fast Food</a>
+                <a href="#">Pet Food</a>
+                <a href="#">Vegetables</a>
             </div>
-            <div id="featuredCategoriesCards">
-                <div class="featuredCategoriesCard">
-                    <img src="./src/images/main/featured-categories/hamburger.png" alt="Hamburger">
-                    <a href="#">Hamburger</a>
-                    <span>26 Items</span>
+            <div id="featuredCategoriesCards" class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="featuredCategoriesCard swiper-slide">
+                        <img src="./src/images/main/featured-categories/hamburger.png" alt="Hamburger">
+                        <a href="#">Hamburger</a>
+                        <span>26 Items</span>
+                    </div>
+                    <div class="featuredCategoriesCard swiper-slide">
+                        <img src="./src/images/main/featured-categories/organic-kiwi.png" alt="Organic Kiwi">
+                        <a href="#">Organic Kiwi</a>
+                        <span>28 Items</span>
+                    </div>
+                    <div class="featuredCategoriesCard swiper-slide">
+                        <img src="./src/images/main/featured-categories/persimmon.png" alt="Persimmon">
+                        <a href="#">Persimmon</a>
+                        <span>14 Items</span>
+                    </div>
+                    <div class="featuredCategoriesCard swiper-slide">
+                        <img src="./src/images/main/featured-categories/red-apple.png" alt="Red Apple">
+                        <a href="#">Red Apple</a>
+                        <span>54 Items</span>
+                    </div>
+                    <div class="featuredCategoriesCard swiper-slide">
+                        <img src="./src/images/main/featured-categories/dog-food.png" alt="Dog Food">
+                        <a href="#">Dog Food</a>
+                        <span>56 Items</span>
+                    </div>
+                    <div class="featuredCategoriesCard swiper-slide">
+                        <img src="./src/images/main/featured-categories/green-cabbage.png" alt="Green Cabbage">
+                        <a href="#">Green Cabbage</a>
+                        <span>72 Items</span>
+                    </div>
+                    <div class="featuredCategoriesCard swiper-slide">
+                        <img src="./src/images/main/featured-categories/strawberry.png" alt="Strawberry">
+                        <a href="#">Strawberry</a>
+                        <span>36 Items</span>
+                    </div>
+                    <div class="featuredCategoriesCard swiper-slide">
+                        <img src="./src/images/main/featured-categories/black-plum.png" alt="Black Plum">
+                        <a href="#">Black Plum</a>
+                        <span>123 Items</span>
+                    </div>
+                    <div class="featuredCategoriesCard swiper-slide">
+                        <img src="./src/images/main/featured-categories/custard-apple.png" alt="Custard Apple">
+                        <a href="#">Custard Apple</a>
+                        <span>34 Items</span>
+                    </div>
+                    <div class="featuredCategoriesCard swiper-slide">
+                        <img src="./src/images/main/featured-categories/chocolate-bar.png" alt="Chocolate Bar">
+                        <a href="#">Chocolate Bar</a>
+                        <span>89 Items</span>
+                    </div>
+                    <div class="featuredCategoriesCard swiper-slide">
+                        <img src="./src/images/main/featured-categories/orange.png" alt="Orange">
+                        <a href="#">Orange</a>
+                        <span>87 Items</span>
+                    </div>
+                    <div class="featuredCategoriesCard swiper-slide">
+                        <img src="./src/images/main/featured-categories/grape.png" alt="Grape">
+                        <a href="#">Grape</a>
+                        <span>50 Items</span>
+                    </div>
+                    <div class="featuredCategoriesCard swiper-slide">
+                        <img src="./src/images/main/featured-categories/dragon-fruit.png" alt="Dragon Fruit">
+                        <a href="#">Dragon Fruit</a>
+                        <span>33 Items</span>
+                    </div>
                 </div>
-                <div class="featuredCategoriesCard">
-                    <img src="./src/images/main/featured-categories/organic-kiwi.png" alt="Organic Kiwi">
-                    <a href="#">Organic Kiwi</a>
-                    <span>28 Items</span>
+                <div class="swiper-button-prev BothSwiperArrows">
+                    <i class="fa-solid fa-arrow-left"></i>
+
                 </div>
-                <div class="featuredCategoriesCard">
-                    <img src="./src/images/main/featured-categories/persimmon.png" alt="Persimmon">
-                    <a href="#">Persimmon</a>
-                    <span>14 Items</span>
-                </div>
-                <div class="featuredCategoriesCard">
-                    <img src="./src/images/main/featured-categories/red-apple.png" alt="Red Apple">
-                    <a href="#">Red Apple</a>
-                    <span>54 Items</span>
-                </div>
-                <div class="featuredCategoriesCard">
-                    <img src="./src/images/main/featured-categories/dog-food.png" alt="Dog Food">
-                    <a href="#">Dog Food</a>
-                    <span>56 Items</span>
-                </div>
-                <div class="featuredCategoriesCard">
-                    <img src="./src/images/main/featured-categories/green-cabbage.png" alt="Green Cabbage">
-                    <a href="#">Green Cabbage</a>
-                    <span>72 Items</span>
-                </div>
-                <div class="featuredCategoriesCard">
-                    <img src="./src/images/main/featured-categories/strawberry.png" alt="Strawberry">
-                    <a href="#">Strawberry</a>
-                    <span>36 Items</span>
-                </div>
-                <div class="featuredCategoriesCard">
-                    <img src="./src/images/main/featured-categories/black-plum.png" alt="Black Plum">
-                    <a href="#">Black Plum</a>
-                    <span>123 Items</span>
-                </div>
-                <div class="featuredCategoriesCard">
-                    <img src="./src/images/main/featured-categories/custard-apple.png" alt="Custard Apple">
-                    <a href="#">Custard Apple</a>
-                    <span>34 Items</span>
-                </div>
-                <div class="featuredCategoriesCard">
-                    <img src="./src/images/main/featured-categories/chocolate-bar.png" alt="Chocolate Bar">
-                    <a href="#">Chocolate Bar</a>
-                    <span>89 Items</span>
-                </div>
-                <div class="featuredCategoriesCard">
-                    <img src="./src/images/main/featured-categories/orange.png" alt="Orange">
-                    <a href="#">Orange</a>
-                    <span>87 Items</span>
-                </div>
-                <div class="featuredCategoriesCard">
-                    <img src="./src/images/main/featured-categories/grape.png" alt="Grape">
-                    <a href="#">Grape</a>
-                    <span>50 Items</span>
-                </div>
-                <div class="featuredCategoriesCard">
-                    <img src="./src/images/main/featured-categories/dragon-fruit.png" alt="Dragon Fruit">
-                    <a href="#">Dragon Fruit</a>
-                    <span>33 Items</span>
+                <div class="swiper-button-next BothSwiperArrows">
+                    <i class="fa-solid fa-arrow-right"></i>
                 </div>
             </div>
         </section>

@@ -9,7 +9,8 @@ for(var i = 0; i < selections.length; i++){
     select.insertBefore(option, select.lastChild);
 }
 
-//
+
+// Setting #HeaderTopSpans Text Appearance
 let headerTopSpansIndex = 0;
 const texts = document.querySelectorAll('#headerTopSpans span');
 
@@ -22,7 +23,6 @@ function updateTopSpans() {
 setInterval(updateTopSpans, 2000); // Change slide every 5 seconds
 
 // Slider for #upBanner section
-
 const prevBtn = document.querySelector('.prev'); // Select previous button if included
 const nextBtn = document.querySelector('.next'); // Select next button if included
 
@@ -40,7 +40,6 @@ const slider = [
     imageUrl: "url('/src/images/main/upbanner/slider-2.png')",
     contentSelector: '#upBannerSlider2',
   },
-  // ... Add more slider objects here
 ];
 
 let currentSlide = 0;
@@ -77,26 +76,12 @@ if (nextBtn) {
 }
 
 
-// Slider for #featuredCategories section
-
-let slideIndex = 0;
-const slides = document.querySelectorAll('#featuredCategoriesCards .featuredCategoriesCard');
-const prevButton = document.querySelector('#featuredCategoriesArrows .prev');
-const nextButton = document.querySelector('#featuredCategoriesArrows .next');
-
-function showSlide(n) {
-    // Normalize slide index
-    slideIndex = (n + slides.length) % slides.length;
-
-    // Show current slide
-    slides.forEach((slide, index) => {
-        slide.style.transform = `translateX(${-slideIndex * 100}%)`;
-    });
-}
-
-// Show the first slide initially
-showSlide(slideIndex);
-
-// Attach event listeners to the buttons
-prevButton.addEventListener('click', () => showSlide(slideIndex - 1));
-nextButton.addEventListener('click', () => showSlide(slideIndex + 1));
+// Slider for #featuredCategories section using swiper.js
+const swiper = new Swiper('#featuredCategoriesCards', {
+  slidesPerView: 'auto', // Adjust this value to control how many slides are visible at a time
+  loop: true, // Enable endless scrolling
+  navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+  },
+});

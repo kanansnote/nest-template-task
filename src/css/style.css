@@ -7,34 +7,54 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Quicksand", sans-serif;
-
 }
 
 a {
     text-decoration: none;
 }
 
-.dropdown {}
-
-/* Style the dropdown button */
-.dropbtn {
-    color: black;
-    padding: 10px;
-    font-size: 16px;
-    border: none;
+.dropdown {
+    position: relative;
+    display: inline-block;
     cursor: pointer;
+    margin-right: 2vh;
 }
 
-/* Style the dropdown content (hidden by default) */
+.dropdownbtn::after {
+    content: "";
+}
+
 .dropdown-content {
     display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
+    position: relative;
+    background-color: #f1f1f1;
+    min-width: 150px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+
+    img {
+        width: 3vh;
+        height: 3vh;
+        position: relative;
+        top: 3px;
+        left: -3px;
+        object-fit: contain;
+    }
+
 }
 
-/* Style the links inside the dropdown */
+.dropdownLanguages {
+    position: absolute;
+    right: 0;
+    min-width: 115px;
+}
+
+.dropdownCurrencies {
+    position: absolute;
+    right: 0;
+    min-width: 90px;
+}
+
 .dropdown-content a {
     color: black;
     padding: 12px 16px;
@@ -42,19 +62,23 @@ a {
     display: block;
 }
 
-/* Change color of links on hover */
 .dropdown-content a:hover {
-    background-color: #f1f1f1;
+    background-color: #ddd;
 }
 
-/* Show the dropdown content when hovering over the dropdown button */
 .dropdown:hover .dropdown-content {
     display: block;
 }
 
-/* Style the dropdown button when hovering */
-.dropdown:hover .dropbtn {
-    background-color: #2980b9;
+.dropbtn i {
+    margin-left: 5px;
+    transition: 0.2s ease-in-out;
+    position: relative;
+    top: 1px;
+}
+
+.dropdown:hover .dropbtn i {
+    transform: rotate(180deg);
 }
 
 #headerTopSpans{
@@ -70,7 +94,7 @@ a {
     }
 }
 
-/* Header */
+/* Let's get started */
 
 header {
     display: flex;
@@ -106,7 +130,6 @@ header {
             display: flex;
             gap: 5px;
         }
-
 
     }
 
@@ -188,7 +211,7 @@ header {
                         font-weight: bold;
                         padding: 20px 40px;
                         position: relative;
-
+                        
                         img {
                             position: absolute;
                             left: 2vh;
@@ -314,6 +337,11 @@ main {
                 right: 40vh;
                 top: 0;
                 cursor: pointer;
+                transition: 0.2s ease-in-out;
+
+                &:hover {
+                    background-color: #29A56C;
+                }
             }
         }
     }
@@ -327,24 +355,16 @@ main {
         
         #featuredCategoriesHeader {
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            gap: 5vh;
+            gap: 3vh;
 
-            #featuredCategoriesText {
-                display: flex;
-                align-items: center;
-                gap: 3vh;
+            a {
+                color: #7E7E7E;
 
-                a {
-                    color: #7E7E7E;
+                &:hover {
+                    color: #3BB77E;
                 }
             }
-        }
-
-        #featuredCategoriesArrows {
-
-
         }
 
         #featuredCategoriesCards {
@@ -353,13 +373,63 @@ main {
             width: 100%;
             overflow-x: scroll;
             scrollbar-width: none;
+            position: relative;
 
             .featuredCategoriesCard {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                width: 15%;
                 padding: 3vh;
                 background-color: #BCE3C9;
+                border-radius: 5vh;
+                margin: 5vh;
+                transition: 0.2s ease-in-out;
+                cursor: pointer;
+                overflow: hidden;
+                
+                a {
+                    color: #253D4E;
+                    font-size: 18px;
+                    font-weight: 600;
+                }
+
+                &:hover {
+                    border: solid 1px #3BB77E;
+
+                    a {
+                        color:#3BB77E;
+                    }
+                }
+            }
+
+            .BothSwiperArrows {
+                background-color: #F2F3F4;
+                color: #7E7E7E;
+                width: 45px;
+                height: 45px;
+                position: absolute;
+                border-radius: 6vh;
+                border: none;
+                cursor: pointer;
+                transition: transform 0.5s ease-in-out;
+        
+                &:hover {
+                    background-color: #3BB77E;
+                    color: white;
+                }
+
+                &::after {
+                    content: "";
+                }
+            }
+
+            .swiper-button-prev {
+
+            }
+
+            .swiper-button-next {
+
             }
         }
         
