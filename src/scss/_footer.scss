@@ -1,0 +1,78 @@
+footer {
+
+    #footerTop {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        a {
+            color: #253D4E;
+
+            &:hover {
+                color: #3BB77E;
+            }
+        }
+
+        .footerTopDiv {
+            display: flex;
+            flex-direction: column;
+            gap: 2vh;
+
+            img {
+                width: 40vh;
+                height: 20vh;
+            }
+
+            #footerTopBadges {
+
+                img {
+                    width: 20vh;
+                    height: 10vh;
+                    object-fit: contain;
+                }
+            }
+        }
+    }
+
+    #footerBottom {
+        padding: 2vh;
+        border-top: solid 1px #bce3c9;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        #socialLinks {
+            display: flex;
+            flex-direction: column;
+
+            div {
+                display: flex;
+                gap: 2vh;
+
+                ul {
+                    list-style-type: none;
+                    display: flex;
+                    gap: 2vh;
+
+                    li {
+                        background-color: #3BB77E;
+                        border-radius: 5vh;
+                        padding-top: 0.75vh;
+                        width: 5vh;
+                        height: 5vh;
+                        bottom: 0;
+                        text-align: center;
+                        transition: 0.5s ease-in-out;
+                        cursor: pointer;
+
+                        i {
+                            font-size: 15px;
+                            color: white;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}
